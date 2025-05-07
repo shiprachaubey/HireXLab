@@ -1,0 +1,75 @@
+.stat-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 720px;
+  align-self: stretch;
+  padding: 40px 0;
+  background: #0E0A0F;
+  box-sizing: border-box;
+}
+
+/* Left side stats */
+.stats {
+  display: flex;
+  gap: 80px;
+  color: #E7E7E7;
+  font-family: Alexandria, sans-serif;
+}
+
+.stats strong {
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 160%;
+  display: block;
+}
+
+.stats p {
+  font-size: 16px;
+  margin: 0;
+  color: #A1A1A1;
+}
+
+/* AI Tools Box */
+.ai-box {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 24px;
+  border-radius: 8px;
+  border: 1px solid rgba(78, 54, 86, 0.10);
+  background: #0E0A0F;
+  box-shadow: inset 0px 0px 20px -5px #443149;
+  max-width: 360px;
+  color: #E7E7E7;
+  font-family: Alexandria, sans-serif;
+}
+
+.ai-box .icon {
+  font-size: 32px;
+  background-color: rgba(255, 255, 255, 0.05);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ai-box .icon svg {
+  width: 100%;
+  height: 100%;
+  stroke: #FCF5FE;
+  stroke-width: 1.5px;
+}
+.ai-box h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 160%;
+}
+
+.ai-box p {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: #C0C0C0;
+}
