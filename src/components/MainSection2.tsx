@@ -1,33 +1,47 @@
 import React from 'react';
 import '../styles//MainSections.css';
-import { ArrowRight, Play } from 'lucide-react';
 
-const HeroSection: React.FC = () => {
-    return (
-      <section className="hero-section">
-        <div className="background-glow"></div>
-        
+const MainSection: React.FC = () => {
+  return (
+    <div className="main-section">
+      <div className="grid-bg"></div>
+      <div className="gradient-blur"></div>
+      
+      <div className="hero-container">
         <h1 className="hero-title">
-          Unlock Intelligent, Data-Driven<br />
-          Growth with <span className="highlight-pill">NexaAI's</span> Our<br />
-          All-In-One AI Automation Platform
+          Unlock Intelligent, Data-Driven Growth with
+          <span className="accent-container">
+            <span className="accent-pill"></span>
+          </span> 
+          Our NexaAI's All-In-One AI Automation Platform
         </h1>
         
-        <p className="hero-description">
-          Leverage the power of AI automation to streamline operations, enhance customer
-          satisfaction, and drive exponential business growth.
+        <p className="subheading">
+          Leverage the power of AI automation to streamline operations, enhance customer satisfaction, and drive exponential business growth.
         </p>
         
-        <div className="cta-buttons">
-          <button className="cta-primary">
-            Get Started <ArrowRight size={18} />
+        <div className="cta-container">
+          <button className="btn btn-primary">
+            Get Started
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 1L15 8L8 15" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M1 8H15" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
           </button>
-          <button className="cta-secondary">
-            Watch Demo <Play size={18} />
+          
+          <button className="btn btn-secondary">
+            <div className="play-icon">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="8" cy="8" r="7.5" stroke="white" strokeOpacity="0.5"/>
+                <path d="M10.5 8L6.5 10.5V5.5L10.5 8Z" fill="white"/>
+              </svg>
+            </div>
+            Watch Demo
           </button>
         </div>
-      </section>
-    );
-  };
-  
-  export default HeroSection;
+      </div>
+    </div>
+  );
+};
+
+export default MainSection;

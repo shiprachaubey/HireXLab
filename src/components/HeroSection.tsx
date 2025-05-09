@@ -1,7 +1,8 @@
 
 import React from 'react';
 import '../styles/hero.css';
-import '../styles/trusted-by.css';
+// import '../styles/trusted-by.css';
+import '../styles/stat-banner.css';
 import Linkdin from '../assets/svgs/Linkdin';
 import Microsoft from '../assets/svgs/Microsoft';
 import Amazon from '../assets/svgs/amazon';
@@ -32,7 +33,7 @@ const HeroSection = () => {
         <button className="btn-secondary">Watch Demo ⏵</button>
       </div>
     
-      {/* <div className="stat-banner">
+      <div className="stat-banner">
       <div className="stats">
         <div>
           <strong>4.8+</strong>
@@ -57,9 +58,9 @@ const HeroSection = () => {
       </div>
     </div>
 
-     */}
-
-<section className="trusted-section">
+     
+{/* 
+ <section className="trusted-section">
       <div className="trusted-title">
         <h2>Trusted <span className="gradient-text">By</span></h2>
         <p>Trusted by Innovators Worldwide</p>
@@ -89,8 +90,8 @@ const HeroSection = () => {
       <Xboxone/>
       
       </div>
-    </section>
-    
+    </section> 
+     */}
     </section>
   );
 };

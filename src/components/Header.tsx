@@ -1,13 +1,14 @@
 // src/components/Header.tsx
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Logo from '../assets/images/logo.png'
 import '../styles/header.css';
 
 const Header: React.FC = () => {
   return (
     <header className="custom-header">
       <div className="logo">
-        <span className="logo-icon">N</span>
+      <img src={Logo}alt="HireX Logo" className="logo-img" />
         <span className="logo-text">HireX Lab</span>
       </div>
       <nav className="nav-links">
