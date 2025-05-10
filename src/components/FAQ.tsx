@@ -1,74 +1,85 @@
 import React, { useState } from 'react';
-import './FAQ.css';
+import '../styles/FAQ.css';
 
-interface FAQItemProps {
+interface FAQItem {
   question: string;
-  answer?: string;
-  isOpen?: boolean;
+  answer: string;
 }
 
-const FAQItem: React.FC<FAQItemProps> = ({ question, answer, isOpen: initialIsOpen = false }) => {
-  const [isOpen, setIsOpen] = useState(initialIsOpen);
-
-  return (
-    <div className="faq-item">
-      <div className="faq-question" onClick={() => setIsOpen(!isOpen)}>
-        <h3>{question}</h3>
-        <button className={`faq-toggle ${isOpen ? 'open' : ''}`}>
-          {isOpen ? '-' : '+'}
-        </button>
-      </div>
-      {isOpen && answer && (
-        <div className="faq-answer">
-          <p>{answer}</p>
-        </div>
-      )}
-    </div>
-  );
-};
-
 const FAQ: React.FC = () => {
-  const faqItems = [
+  const [activeIndex, setActiveIndex] = useState<number>(1); // Setting the second question as initially active
+
+  const faqData: FAQItem[] = [
     {
-      question: "How does NexaAI protect my data?",
-      answer: "NexaAI employs enterprise-grade encryption and follows strict compliance protocols to ensure your data remains secure. All information is encrypted both in transit and at rest, and we maintain SOC 2 Type II certification. Our platform includes customizable data retention policies and never uses customer data for model training without explicit permission."
+      question: "How does HireX Lab use AI in the hiring process?",
+      answer: "HireX Lab leverages AI throughout the hiring journey—from automatically parsing and ranking resumes based on job requirements to conducting preliminary candidate screenings through conversational AI. Our algorithms help eliminate bias while identifying the most promising candidates quickly."
     },
     {
-      question: "Can I change my subscription plan at any time?",
-      answer: "Absolutely—you can upgrade or downgrade directly from your NexaAI dashboard. Prorated billing ensures you only pay for what you use, and changes take effect immediately with no downtime."
+      question: "Can I customize the assessments for different job roles?",
+      answer: "Absolutely! You can create role-specific tests or use our smart templates. Assessments adapt to the job's skill requirements and can be MCQs, coding tasks, or logic-based questions."
     },
     {
-      question: "Are custom integrations available?",
-      answer: "Yes, NexaAI offers extensive API access and supports integration with most major enterprise systems. Our professional services team can help develop custom connectors for proprietary systems, and we provide comprehensive documentation and support throughout the integration process."
+      question: "How fast can I start using HireX Lab?",
+      answer: "You can be up and running within minutes. Simply sign up, select your plan, and create your first job posting. Our onboarding wizard will guide you through configuration, and you can import candidates from your existing ATS or spreadsheets for immediate processing."
     },
     {
-      question: "What onboarding support does NexaAI provide?",
-      answer: "NexaAI provides comprehensive onboarding support including dedicated implementation specialists, customized training sessions, and 24/7 technical assistance. Enterprise customers receive a dedicated customer success manager who helps with implementation strategy, adoption planning, and ongoing optimization."
+      question: "Do candidates need to sign up to apply for jobs?",
+      answer: "No, candidates can apply directly through your branded application portal without creating accounts. This streamlined process significantly improves completion rates while still gathering all necessary information and automatically scheduling initial assessments."
+    },
+    {
+      question: "What's included in the white-labeled Enterprise plan?",
+      answer: "Our Enterprise plan offers complete white-labeling of all candidate-facing elements, including assessment portals, email communications, and interview scheduling tools. Your branding remains front and center throughout the candidate journey, ensuring a consistent experience aligned with your company identity."
     }
   ];
 
+  const toggleQuestion = (index: number) => {
+    setActiveIndex(activeIndex === index ? -1 : index);
+  };
+
   return (
-    <div className="faq-container">
-      <div className="faq-sidebar">
-        <h1 className="faq-title">Frequently <span>asked questions</span></h1>
-        <p className="faq-description">
-          Discover how leading businesses optimize performance, automate workflows, and achieve transformative growth with NexaAI.
+    <section className="faq-section">
+      <div className="faq-left-content">
+        <h2 className="faq-title">
+          Frequently<br />asked <span>questions</span>
+        </h2>
+        <p className="faq-subtitle">
+          Got questions? We've got answers. Here's what recruiters and candidates often ask before getting started.
         </p>
-        <button className="get-started-button">
-          Get Started <span className="arrow">↗</span>
+        <button className="faq-cta-button">
+          Start Hiring
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3.33337 8.00004H12.6667M12.6667 8.00004L8.00004 3.33337M12.6667 8.00004L8.00004 12.6667" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
         </button>
       </div>
-      <div className="faq-content">
-        {faqItems.map((item, index) => (
-          <FAQItem 
+
+      <div className="faq-right-content">
+        {faqData.map((item, index) => (
+          <div 
             key={index} 
-            question={item.question} 
-            answer={item.answer} 
-            isOpen={index === 1} // Only the second item is open by default
-          />
+            className={`faq-item ${activeIndex === index ? 'active' : ''}`}
+          >
+            <div className="faq-question-row" onClick={() => toggleQuestion(index)}>
+              <h3 className="faq-question">{item.question}</h3>
+              <div className={`faq-toggle-icon ${activeIndex === index ? 'minus' : 'plus'}`}>
+                {activeIndex === index ? (
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 12H18" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                ) : (
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 6V18M6 12H18" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                )}
+              </div>
+            </div>
+            <p className="faq-answer">
+              {item.answer}
+            </p>
+          </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

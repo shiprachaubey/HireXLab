@@ -35,55 +35,74 @@ interface PricingPlan {
   ctaText: string;
 }
 
-const Subscription: React.FC = () => {
-  const [billingPeriod, setBillingPeriod] = useState<'monthly' | 'yearly'>('monthly');
+const Subscription = () => {
+  const [billingPeriod, setBillingPeriod] = useState('monthly');
 
-  const plans: PricingPlan[] = [
+  const plans = [
     {
-      icon: <LightbulbIcon />,
-      title: 'Starter',
-      price: { monthly: 29, yearly: 290 },
-      subtitle: 'For Small Businesses',
+      icon: "💡",
+      title: "Starter",
+      price: {
+        monthly: 29,
+        yearly: 290,
+      },
+      subtitle: "For Small Businesses",
       features: [
-        { text: 'Up to 3 users' },
-        { text: 'Basic AI modules' },
-        { text: 'Email support' },
+        { text: "Up to 3 job postings/month" },
+        { text: "AI Resume Parsing" },
+        { text: "Automated Assessments" },
+        { text: "Basic Interview Scheduling" },
+        { text: "Email support" },
       ],
-      ctaText: 'Choose Starter',
+      ctaText: "Choose Starter",
     },
     {
-      icon: <GrowthIcon />,
-      title: 'Growth',
-      price: { monthly: 79, yearly: 790 },
-      subtitle: 'For Growing Businesses',
+      icon: "📈",
+      title: "Growth",
+      price: {
+        monthly: 79,
+        yearly: 790,
+      },
+      subtitle: "For Growing Businesses",
       features: [
-        { text: 'Up to 10 users' },
-        { text: 'All modules + API access' },
-        { text: 'Priority support' },
+        { text: "Unlimited Job Postings" },
+        { text: "AI Resume Parsing + Ranking" },
+        { text: "Smart Scheduling Agent" },
+        { text: "Custom Assessments" },
+        { text: "Interviewer Feedback Forms" },
+        { text: "Priority support" },
       ],
-      ctaText: 'Choose Growth',
+      ctaText: "Choose Growth",
+      featured: true
     },
     {
-      icon: <BuildingIcon />,
-      title: 'Enterprise',
-      price: { monthly: 99, yearly: 990 },
-      subtitle: 'For Established Businesses',
+      icon: "🏢",
+      title: "Enterprise",
+      price: {
+        monthly: 99,
+        yearly: 990,
+      },
+      subtitle: "For Established Businesses",
       features: [
-        { text: 'Unlimited Users' },
-        { text: 'Dedicated workflows + SLA' },
-        { text: '24/7 white-glove' },
+        { text: "Everything in Growth+" },
+        { text: "Dedicated Account Manager" },
+        { text: "White-Labelled Platforms" },
+        { text: "ATS Integrations" },
+        { text: "Custom Analytics Dashboard" },
+        { text: "API Access + SLA Uptime Guarantee" },
       ],
-      ctaText: 'Get Enterprise',
-    },
+      ctaText: "Book a Demo Call",
+    }
   ];
+
 
   return (
     <section className="pricing-section">
       <div className="heading-container">
-        <h1 className="heading">Flexible Pricing for<br />Every Growth Stage</h1>
+        <h1 className="heading">Flexible Plans for<br />Every Hiring Team</h1>
         <p className="subheading">
-          Select your NexaAI plan—transparent tiers, scalable AI-powered features, and premium
-          support—designed to maximize ROI and empower growth-driven decisions.
+          Start small or scale fast—choose the plan that matches your hiring goals. No hidden
+          fees. No manual work. Just smart, AI-powered recruitment.
         </p>
       </div>
 
@@ -103,38 +122,39 @@ const Subscription: React.FC = () => {
       </div>
 
       <div className="cards-container">
-  {plans.map((plan, index) => (
-    <div className="pricing-card" key={index}>
-      <div className="card-top-row">
-        <span className="card-icon">{plan.icon}</span>
-        <h2 className="card-title">{plan.title}</h2>
-      </div>
+        {plans.map((plan, index) => (
+          <div 
+            className={`pricing-card ${plan.featured ? 'featured-card' : ''}`} 
+            key={index}
+          >
+            <div className="card-top-row">
+              <span className="card-icon">{plan.icon}</span>
+              <h2 className="card-title">{plan.title}</h2>
+            </div>
 
-      <div className="price-container">
-        <span className="price">${billingPeriod === 'monthly' ? plan.price.monthly : plan.price.yearly}</span>
-        <span className="price-period">/{billingPeriod === 'monthly' ? 'mo' : 'yr'}</span>
-      </div>
+            <div className="price-container">
+              <span className="price">${billingPeriod === 'monthly' ? plan.price.monthly : plan.price.yearly}</span>
+              <span className="price-period">/{billingPeriod === 'monthly' ? 'mo' : 'yr'}</span>
+            </div>
 
-      <p className="card-subtitle">{plan.subtitle}</p>
-      <div className="divider" />
+            <p className="card-subtitle">{plan.subtitle}</p>
+            <div className="divider" />
 
-      <ul className="features-list">
-        {plan.features.map((feature, i) => (
-          <li className="feature-item" key={i}>
-            <span className="feature-check">✓</span>
-            {feature.text}
-          </li>
+            <ul className="features-list">
+              {plan.features.map((feature, i) => (
+                <li className="feature-item" key={i}>
+                  <span className="feature-check">✓</span>
+                  {feature.text}
+                </li>
+              ))}
+            </ul>
+
+            <button className="cta-button">
+              {plan.ctaText} <span className="arrow">→</span>
+            </button>
+          </div>
         ))}
-      </ul>
-
-      <button className="cta-button">
-        {plan.ctaText} <span className="arrow">→</span>
-      </button>
-    </div>
-  ))}
-</div>
-
-
+      </div>
     </section>
   );
 };

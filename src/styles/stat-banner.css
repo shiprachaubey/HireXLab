@@ -1,20 +1,23 @@
 .stat-banner {
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  gap: 720px;
-  align-self: stretch;
-  padding: 40px 0;
+  flex-wrap: wrap;
+  gap: 32px;
+  padding: 40px 24px;
   background: #0E0A0F;
   box-sizing: border-box;
+  width: 100%;
 }
 
-/* Left side stats */
 .stats {
   display: flex;
-  gap: 80px;
+  flex-direction: row;
+  gap: 40px;
   color: #E7E7E7;
   font-family: Alexandria, sans-serif;
+  flex-wrap: wrap;
 }
 
 .stats strong {
@@ -27,22 +30,23 @@
 .stats p {
   font-size: 16px;
   margin: 0;
-  color: #A1A1A1;
+  color: #888;
 }
 
-/* AI Tools Box */
 .ai-box {
   display: flex;
   align-items: center;
   gap: 16px;
   padding: 16px 24px;
   border-radius: 8px;
-  border: 1px solid rgba(78, 54, 86, 0.10);
-  background: #0E0A0F;
-  box-shadow: inset 0px 0px 20px -5px #443149;
   max-width: 360px;
   color: #E7E7E7;
   font-family: Alexandria, sans-serif;
+  flex-shrink: 0;
+  border-radius: 8px;
+border: 1px solid rgba(78, 54, 86, 0.10);
+background: #0E0A0F;
+box-shadow: 0px 0px 20px -5px #443149 inset;
 }
 
 .ai-box .icon {
@@ -55,12 +59,14 @@
   align-items: center;
   justify-content: center;
 }
+
 .ai-box .icon svg {
   width: 100%;
   height: 100%;
   stroke: #FCF5FE;
   stroke-width: 1.5px;
 }
+
 .ai-box h3 {
   margin: 0;
   font-size: 20px;
@@ -72,4 +78,41 @@
   margin: 4px 0 0;
   font-size: 14px;
   color: #C0C0C0;
+}
+
+/* 👇 Responsive styles */
+@media (max-width: 1024px) {
+  .stat-banner {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .stats {
+    justify-content: center;
+    gap: 32px;
+  }
+
+  .ai-box {
+    margin-top: 16px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .stats strong {
+    font-size: 28px;
+  }
+
+  .stats p {
+    font-size: 14px;
+  }
+
+  .ai-box h3 {
+    font-size: 18px;
+  }
+
+  .ai-box p {
+    font-size: 13px;
+  }
 }

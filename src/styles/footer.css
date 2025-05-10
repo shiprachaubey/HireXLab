@@ -8,7 +8,9 @@
 .hirexlab-container {
   position: relative;
   width: 100%;
-  height: 350px;
+  /* height: 35vw; scales height based on screen width */
+  max-height: 400px;
+  height: clamp(150px, 30vw, 350px);
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -18,22 +20,21 @@
 
 .hirexlab-text {
   position: absolute;
-  left: 20%;
-  bottom: -45px;
+  left: 10vw; /* scales with screen width */
+  bottom: 2vw; /* pushes down but scales */
   font-family: 'Alexandria', sans-serif;
-  font-size: 300px;
+  font-size: 20vw; /* responsive text size */
   font-weight: 400;
   background: linear-gradient(180deg, #BC4F51 18%, rgba(14, 10, 15, 0.00) 89.29%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  line-height: normal;
-  margin: 10px;
+  line-height: 1;
+  margin: 0;
   z-index: 1;
-  letter-spacing: -5px;
+  letter-spacing: -0.5vw;
   opacity: 0.9;
 }
-
 .footer-container {
   display: flex;
   padding: 60px 64px 40px 64px;
@@ -104,9 +105,16 @@
 .with-arrow::after {
  
   margin-left: 8px;
-  font-size: 1rem;
+  font-size: 50px;
 }
 
+.link-column svg {
+  margin-left: 8px;
+}
+
+.footer-links  svg {
+  margin-left: 8px;
+}
 .contact-info {
   display: flex;
   flex-direction: column;
@@ -194,5 +202,14 @@
   .hirexlab-text {
     font-size: 100px;
     right: -50px;
+  }
+
+  @media (max-width: 480px) {
+    .hirexlab-text {
+      font-size: 28vw;
+      left: 5vw;
+      bottom: -10vw;
+      letter-spacing: -1vw;
+    }
   }
 }

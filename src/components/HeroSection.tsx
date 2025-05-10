@@ -1,8 +1,8 @@
 
 import React from 'react';
 import '../styles/hero.css';
-// import '../styles/trusted-by.css';
 import '../styles/stat-banner.css';
+import '../styles/trusted-by.css';
 import Linkdin from '../assets/svgs/Linkdin';
 import Microsoft from '../assets/svgs/Microsoft';
 import Amazon from '../assets/svgs/amazon';
@@ -24,13 +24,12 @@ const HeroSection = () => {
       </h1>
 
       <p className="hero-subtitle">
-        Leverage the power of AI automation to streamline operations, enhance customer satisfaction,
-        and drive exponential business growth.
+        Automated Screening, assessments and interviews to find the right candidates faster. 
       </p>
 
       <div className="hero-buttons">
-        <button className="btn-primary">Start Free Trial ↗</button>
-        <button className="btn-secondary">Watch Demo ⏵</button>
+        <button className="btn-primary">Explore Jobs ↗</button>
+        <button className="btn-secondary">Hire Talents ⏵</button>
       </div>
     
       <div className="stat-banner">
@@ -41,7 +40,11 @@ const HeroSection = () => {
         </div>
         <div>
           <strong>24k+</strong>
-          <p>Satisfied Customer</p>
+          <p>Satisfied Recruiters</p>
+        </div>
+        <div>
+          <strong>24k+</strong>
+          <p>Hired Candidates</p>
         </div>
       </div>
 
@@ -58,41 +61,12 @@ const HeroSection = () => {
       </div>
     </div>
 
-     
-{/* 
- <section className="trusted-section">
-      <div className="trusted-title">
-        <h2>Trusted <span className="gradient-text">By</span></h2>
-        <p>Trusted by Innovators Worldwide</p>
-      </div>
 
-      <div className="trusted-logos">
-      <PayPal />
-      <svg xmlns="http://www.w3.org/2000/svg" width="29" height="20" viewBox="0 0 29 20" fill="none">
-  <path d="M16.4662 15.7837L14.7799 20L13.0937 15.7837C12.6579 14.6946 11.8408 13.7028 10.7194 12.9018C9.59811 12.1009 8.20956 11.5172 6.68483 11.2059L0.779938 10L6.68275 8.79556C8.20749 8.48426 9.59603 7.90059 10.7174 7.09964C11.8387 6.29869 12.6558 5.30687 13.0916 4.21778L14.7799 0L16.4662 4.2163C16.902 5.30539 17.7191 6.29721 18.8404 7.09816C19.9618 7.89911 21.3503 8.48277 22.875 8.79407L28.7799 10L22.8771 11.2044C21.3524 11.5157 19.9638 12.0994 18.8425 12.9004C17.7212 13.7013 16.9041 14.6931 16.4682 15.7822L16.4662 15.7837Z" fill="#888888"/>
-</svg>
-      <Linkdin />
-      <svg xmlns="http://www.w3.org/2000/svg" width="29" height="20" viewBox="0 0 29 20" fill="none">
-  <path d="M16.4662 15.7837L14.7799 20L13.0937 15.7837C12.6579 14.6946 11.8408 13.7028 10.7194 12.9018C9.59811 12.1009 8.20956 11.5172 6.68483 11.2059L0.779938 10L6.68275 8.79556C8.20749 8.48426 9.59603 7.90059 10.7174 7.09964C11.8387 6.29869 12.6558 5.30687 13.0916 4.21778L14.7799 0L16.4662 4.2163C16.902 5.30539 17.7191 6.29721 18.8404 7.09816C19.9618 7.89911 21.3503 8.48277 22.875 8.79407L28.7799 10L22.8771 11.2044C21.3524 11.5157 19.9638 12.0994 18.8425 12.9004C17.7212 13.7013 16.9041 14.6931 16.4682 15.7822L16.4662 15.7837Z" fill="#888888"/>
-</svg>
-      <Xboxone />
-      <svg xmlns="http://www.w3.org/2000/svg" width="29" height="20" viewBox="0 0 29 20" fill="none">
-  <path d="M16.4662 15.7837L14.7799 20L13.0937 15.7837C12.6579 14.6946 11.8408 13.7028 10.7194 12.9018C9.59811 12.1009 8.20956 11.5172 6.68483 11.2059L0.779938 10L6.68275 8.79556C8.20749 8.48426 9.59603 7.90059 10.7174 7.09964C11.8387 6.29869 12.6558 5.30687 13.0916 4.21778L14.7799 0L16.4662 4.2163C16.902 5.30539 17.7191 6.29721 18.8404 7.09816C19.9618 7.89911 21.3503 8.48277 22.875 8.79407L28.7799 10L22.8771 11.2044C21.3524 11.5157 19.9638 12.0994 18.8425 12.9004C17.7212 13.7013 16.9041 14.6931 16.4682 15.7822L16.4662 15.7837Z" fill="#888888"/>
-</svg>
-      <Amazon />
-      <svg xmlns="http://www.w3.org/2000/svg" width="29" height="20" viewBox="0 0 29 20" fill="none">
-  <path d="M16.4662 15.7837L14.7799 20L13.0937 15.7837C12.6579 14.6946 11.8408 13.7028 10.7194 12.9018C9.59811 12.1009 8.20956 11.5172 6.68483 11.2059L0.779938 10L6.68275 8.79556C8.20749 8.48426 9.59603 7.90059 10.7174 7.09964C11.8387 6.29869 12.6558 5.30687 13.0916 4.21778L14.7799 0L16.4662 4.2163C16.902 5.30539 17.7191 6.29721 18.8404 7.09816C19.9618 7.89911 21.3503 8.48277 22.875 8.79407L28.7799 10L22.8771 11.2044C21.3524 11.5157 19.9638 12.0994 18.8425 12.9004C17.7212 13.7013 16.9041 14.6931 16.4682 15.7822L16.4662 15.7837Z" fill="#888888"/>
-</svg>
-      <Tunein />
-      <svg xmlns="http://www.w3.org/2000/svg" width="29" height="20" viewBox="0 0 29 20" fill="none">
-  <path d="M16.4662 15.7837L14.7799 20L13.0937 15.7837C12.6579 14.6946 11.8408 13.7028 10.7194 12.9018C9.59811 12.1009 8.20956 11.5172 6.68483 11.2059L0.779938 10L6.68275 8.79556C8.20749 8.48426 9.59603 7.90059 10.7174 7.09964C11.8387 6.29869 12.6558 5.30687 13.0916 4.21778L14.7799 0L16.4662 4.2163C16.902 5.30539 17.7191 6.29721 18.8404 7.09816C19.9618 7.89911 21.3503 8.48277 22.875 8.79407L28.7799 10L22.8771 11.2044C21.3524 11.5157 19.9638 12.0994 18.8425 12.9004C17.7212 13.7013 16.9041 14.6931 16.4682 15.7822L16.4662 15.7837Z" fill="#888888"/>
-</svg>
-      <Xboxone/>
-      
-      </div>
-    </section> 
-     */}
+ 
+    
     </section>
+    
+    
   );
 };
 

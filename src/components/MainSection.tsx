@@ -21,9 +21,10 @@ const MainSection: React.FC = () => {
 </svg>
             </div>
             <div className="card-content">
-              <h3>Smart-AI Marketing</h3>
-              <p>Automate campaign creation, segmentation, and A/B testing with predictive targeting</p>
+              <h3>Smart-AI Resuming</h3>
+              <p>Our intelligent parsing engine decodes resumes into structured data and ranks candidates based on role relevance, skills match, and historical performance insights—automatically.</p>
             </div>
+            <div className="card-footer">Let algorithms do the sorting..</div>
           </div>
           
           <div className="feature-card">
@@ -33,9 +34,10 @@ const MainSection: React.FC = () => {
 </svg>
             </div>
             <div className="card-content">
-              <h3>Sales Acceleration</h3>
-              <p>Forecast deals, prioritize leads, and automate outreach for higher conversion</p>
+              <h3>Autonomous Screening Agents</h3>
+              <p>HireX Agents conduct real-time pre-screening via dynamic Q&A, sentiment cues, and qualification checks—so recruiters engage only with pre-qualified talent.</p>
             </div>
+            <div className="card-footer">24/7 pre-interview intelligence.</div>
           </div>
           
           <div className="feature-card">
@@ -45,9 +47,10 @@ const MainSection: React.FC = () => {
 </svg>
             </div>
             <div className="card-content">
-              <h3>Customer Insights</h3>
-              <p>Unify data from CRM, support, and social channels to understand behavior patterns</p>
+              <h3>Adaptive Skill Assessments</h3>
+              <p>Our AI tailors assessments dynamically based on job role, candidate profile, and past test performance. Instant scoring removes bias and saves hours.</p>
             </div>
+            <div className="card-footer">Custom tests, intelligent scoring</div>
           </div>
           
           <div className="feature-card">
@@ -57,9 +60,10 @@ const MainSection: React.FC = () => {
 </svg>
             </div>
             <div className="card-content">
-              <h3>Operational Analytics</h3>
-              <p>Monitor KPIs in real time, detect anomalies, and receive proactive alerts</p>
+              <h3>AI Scheduling Assistant</h3>
+              <p>Our smart scheduling agent syncs calendars, suggests optimal slots, and auto-resolves conflicts—freeing up recruiters from endless back-and-forth.</p>
             </div>
+            <div className="card-footer">No calendars, no conflicts.</div>
           </div>
           
           <div className="feature-card">
@@ -69,9 +73,10 @@ const MainSection: React.FC = () => {
 </svg>
             </div>
             <div className="card-content">
-              <h3>Intelligent Workflows</h3>
-              <p>Design drag-and-drop automations for repetitive tasks across departments</p>
+              <h3>Automated Interview Summaries</h3>
+              <p>Agents transcribe, summarize, and tag interviews in real-time—delivering structured feedback forms and recommendations straight to your dashboard..</p>
             </div>
+            <div className="card-footer">Your notes, taken care of.</div>
           </div>
           
           <div className="feature-card">
@@ -81,9 +86,10 @@ const MainSection: React.FC = () => {
 </svg>
             </div>
             <div className="card-content">
-              <h3>Secure Data Hub</h3>
-              <p>Enterprise-grade encryption and governance for all your AI workloads</p>
+              <h3>Insights & Hiring Agent</h3>
+              <p>Get dynamic insights into hiring velocity, candidate funnel efficiency, and recruiter performance—powered by machine learning, not manual exports.</p>
             </div>
+            <div className="card-footer">Decisions backed by data.</div>
           </div>
         </div>
       </div>

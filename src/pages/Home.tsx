@@ -10,20 +10,22 @@ import PromotionSection from '../components/PromotionSection';
 import Subscription from '../components/Subscription';
 import Innovation from '../components/Innovation';
 import Footer from '../components/Footer';
-
+import FAQ from '../components/FAQ';
 export default function Home() {
   return (
     <div>
       <Header />
       <HeroSection />
       {/* <Statebanner/> */}
-      <TrustedBy/> 
-      <MainSection />
-     < MainSection2 />
-      <PromotionSection/>
+   {/* <TrustedBy/>   */}
+     <MainSection />
+    < MainSection2 />
+    <Subscription/> 
+    <Innovation/> 
+       {/*  <PromotionSection/>
       <Subscription/> 
-      <Innovation/>
-      {/* <FAQ/> */}
+      <Innovation/>  */}
+      <FAQ/>
       <Footer/>
     </div>
   );
