@@ -35,16 +35,16 @@ const Footer: React.FC = () => {
           </div>
           
           <div className="link-column">
-            <a href="https://instagram.com/nexaai" className="footer-link with-arrow">Instagram  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+            <a href="https://www.instagram.com/techstudiolabs.official/" className="footer-link with-arrow">Instagram  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
   <path d="M1.25 8.75L8.75 1.25M8.75 1.25H3.125M8.75 1.25V6.875" stroke="#FCF5FE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg> </a>
-            <a href="https://youtube.com/nexaai" className="footer-link with-arrow">YouTube  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+            <a href="https://www.facebook.com/tech.studio.labs" className="footer-link with-arrow">Facebook  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
   <path d="M1.25 8.75L8.75 1.25M8.75 1.25H3.125M8.75 1.25V6.875" stroke="#FCF5FE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg> </a>
-            <a href="https://twitter.com/nexaai" className="footer-link with-arrow">Twitter  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+            {/* <a href="https://twitter.com/nexaai" className="footer-link with-arrow">Twitter  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
   <path d="M1.25 8.75L8.75 1.25M8.75 1.25H3.125M8.75 1.25V6.875" stroke="#FCF5FE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</svg> </a>
-            <a href="https://linkedin.com/company/nexaai" className="footer-link with-arrow"> LinkedIn  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+</svg> </a> */}
+            <a href="https://www.linkedin.com/company/tech-studio-labs/" className="footer-link with-arrow"> LinkedIn  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
   <path d="M1.25 8.75L8.75 1.25M8.75 1.25H3.125M8.75 1.25V6.875" stroke="#FCF5FE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg> </a>
           </div>
