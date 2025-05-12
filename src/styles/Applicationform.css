@@ -1,0 +1,175 @@
+/* Full-screen responsive form container */
+.form-wrapper {
+  width: 100vw;
+  min-height: 100vh;
+  padding: 100px 5vw 40px; /* dynamic side padding */
+  box-sizing: border-box;
+  background-color: #0E0A0F;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow-y: auto;
+  margin: 0;
+}
+
+
+
+
+/* Main Heading */
+.form-title {
+background: linear-gradient(92deg, #FFF 44.83%, rgba(228, 160, 247, 0.90) 92.6%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
+}
+
+.form-title span {
+  color: #C29BFF;
+}
+
+/* Subtext and greeting */
+.form-instructions {
+  max-width: 400px;
+  text-align: right;
+  color: #ccc;
+  font-size: 1rem;
+  flex: 1 1 300px;
+  padding-top: 8px;
+}
+
+.form-greeting {
+  font-size: 1rem;
+  margin: 20px 0;
+}
+
+/* Section Title */
+.section-title {
+  font-size: 1.2rem;
+  border-bottom: 1px solid rgba(200, 200, 200, 0.2);
+  padding-bottom: 8px;
+  margin-bottom: 24px;
+}
+
+/* Grid layout for form fields */
+.form-container {
+  width: 100%;
+  margin: 0;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+  color: #ccc; /* Softer label color for better readability */
+}
+
+.form-group input {
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(78, 54, 86, 0.80);
+  background-color: rgba(30, 20, 30, 0.5); /* Slightly more visible input background */
+  color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #C29BFF; /* Highlight color when focused */
+}
+
+/* Upload Resume */
+.full-width {
+  grid-column: span 2;
+}
+
+.upload-box {
+  border-radius: 12px;
+  border: 1px solid rgba(78, 54, 86, 0.80);
+  background: linear-gradient(150deg, #0E0A0F 17.18%, #443149 227.36%);
+  padding: 14px 20px;
+  text-align: center;
+  cursor: pointer;
+  color: #ccc;
+  transition: background 0.3s ease;
+}
+
+.upload-box:hover {
+  background: linear-gradient(150deg, #1A1520 17.18%, #5A4A64 227.36%);
+}
+
+/* Footer: Powered by */
+.powered-by {
+  margin-top: 40px;
+  text-align: right;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.powered-by strong {
+  margin-left: 4px;
+  color: #fff;
+}
+
+@media (max-width: 1024px) {
+  .form-wrapper {
+    padding: 80px 4vw 30px;
+  }
+
+  .form-title {
+    font-size: 2.8rem;
+    line-height: 1.2;
+  }
+}
+
+@media (max-width: 768px) {
+  .form-wrapper {
+    padding: 60px 4vw 20px;
+  }
+
+  .form-title {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .form-instructions,
+  .form-greeting {
+    text-align: center;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .full-width {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-title {
+    font-size: 1.6rem;
+  }
+
+  .form-group input {
+    font-size: 0.9rem;
+  }
+
+  .upload-box {
+    font-size: 0.9rem;
+    padding: 12px;
+  }
+}

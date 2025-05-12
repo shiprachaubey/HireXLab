@@ -1,0 +1,72 @@
+/* Full-width sticky navbar */
+.custom-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100px;
+  background: #0E0A0F;
+  border-bottom: 1px solid rgba(68, 49, 73, 0.60);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  color: white;
+  box-sizing: border-box;
+}
+
+/* Container holds content but now starts flush left */
+.navbar-container {
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Logo section */
+.navbar-logo {
+  width: 227px;
+  height: 46px;
+  aspect-ratio: 227 / 46;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+/* Navigation links */
+.navbar-right {
+  display: flex;
+  gap: 32px;
+}
+
+.navbar-right a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .navbar-container {
+    padding: 0 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 16px 24px;
+  }
+
+  .navbar-right {
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 10px;
+    width: 100%;
+  }
+}
